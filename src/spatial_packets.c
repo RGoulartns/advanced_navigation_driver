@@ -29,8 +29,8 @@
  
  #include <stdint.h>
  #include <string.h>
- #include "an_packet_protocol.h"
- #include "spatial_packets.h"
+ #include "an_ins_driver/an_packet_protocol.h"
+ #include "an_ins_driver/spatial_packets.h"
 
 /*
  * This file contains functions to decode and encode packets

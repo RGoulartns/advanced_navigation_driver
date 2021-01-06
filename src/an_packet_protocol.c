@@ -30,7 +30,7 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include <string.h>
-#include "an_packet_protocol.h"
+#include "an_ins_driver/an_packet_protocol.h"
 
 /*
  * Function to calculate the CRC16 of data
