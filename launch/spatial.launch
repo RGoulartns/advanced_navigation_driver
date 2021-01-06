@@ -1,0 +1,13 @@
+<launch>
+	<node pkg="tf2_ros" name="imu_pub" type="static_transform_publisher" args="0 0 0 0 0 0 base_link imu"/>
+	<node pkg="tf2_ros" type="static_transform_publisher" name="gps_trans" args="0 0 0 0 0 0 base_link gps"/>
+	
+	<node pkg="advanced_navigation_driver" type="advanced_navigation_driver" output="screen" name="spatial">
+		<param name="port" value="/dev/ttyUSB0"/>
+		<param name="baud" value="115200"/>
+		<param name="utm_zone" value="56"/>
+		<param name="yaw_offset" value="0"/>
+		<remap from="/spatial/Imu" to="/ins/imu"/>
+		<remap from="/spatial/NavSatFix" to="/ins/fix"/>
+	</node>
+</launch>
